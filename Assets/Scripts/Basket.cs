@@ -6,6 +6,7 @@ public class Basket : MonoBehaviour {
     public GUIText scoreGT;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
      void Start()
     {
         GameObject scoreGO = GameObject.Find("ScoreCounter");
@@ -14,6 +15,11 @@ public class Basket : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
+=======
+    
+	// Update is called once per frame
+	void Update () {
+>>>>>>> ab60857902fa47c99183570d545a69ac29c963c7
 =======
     
 	// Update is called once per frame
@@ -36,6 +42,7 @@ public class Basket : MonoBehaviour {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         int score = int.Parse(scoreGT.text);
         score += 100;
         scoreGT.text = score.ToString();
@@ -45,6 +52,8 @@ public class Basket : MonoBehaviour {
             HighScore.score = score;
         }
 
+=======
+>>>>>>> ab60857902fa47c99183570d545a69ac29c963c7
 =======
 >>>>>>> ab60857902fa47c99183570d545a69ac29c963c7
     }

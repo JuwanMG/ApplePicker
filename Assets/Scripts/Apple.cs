@@ -15,11 +15,15 @@ public class Apple : MonoBehaviour {
         {
             Destroy(this.gameObject);
 <<<<<<< HEAD
+<<<<<<< HEAD
             ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
             apScript.AppleDestroyed();
         }
 
         
+=======
+        }
+>>>>>>> ab60857902fa47c99183570d545a69ac29c963c7
 =======
         }
 >>>>>>> ab60857902fa47c99183570d545a69ac29c963c7
