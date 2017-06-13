@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class AppleTree : MonoBehaviour {
 
@@ -9,13 +10,21 @@ public class AppleTree : MonoBehaviour {
     public float chanceToChangeDirections = 0.1f;
     public float secondsBetweenAppleDrops = 1f;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
+        InvokeRepeating("DropApple", 2f, secondsBetweenAppleDrops);
+    }
+
+    void DropApple()
+    {
+        GameObject apple = Instantiate(applePrefab) as GameObject;
+        apple.transform.position = transform.position;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         Vector3 pos = transform.position;
         pos.x += speed * Time.deltaTime;
         transform.position = pos;
@@ -23,11 +32,12 @@ public class AppleTree : MonoBehaviour {
         if (pos.x < -leftAndRightEdge)
         {
             speed = Mathf.Abs(speed);
-        } else if (pos.x > leftAndRightEdge)
+        }
+        else if (pos.x > leftAndRightEdge)
         {
             speed = -Mathf.Abs(speed);
         }
-	}
+    }
 
     void FixedUpdate()
     {
@@ -36,5 +46,4 @@ public class AppleTree : MonoBehaviour {
             speed *= -1;
         }
     }
-
 }
